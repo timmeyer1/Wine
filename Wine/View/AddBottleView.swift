@@ -13,7 +13,7 @@ struct AddBottleView: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var nom = ""
-    @State private var type = ""
+    @State private var selectedType: WineType = .reds  // Type sélectionné par défaut
     @State private var annee = ""
     @State private var imageURL = ""
     @State private var quantite = "1"
@@ -23,7 +23,14 @@ struct AddBottleView: View {
         Form {
             Section(header: Text("Informations sur la bouteille")) {
                 TextField("Nom", text: $nom)
-                TextField("Type (Rouge, Blanc…)", text: $type)
+                
+                // Picker pour le type de vin utilisant l'énumération WineType existante
+                Picker("Type de vin", selection: $selectedType) {
+                    ForEach(WineType.allCases, id: \.self) { wineType in
+                        Text(wineType.label).tag(wineType)
+                    }
+                }
+                
                 TextField("Année", text: $annee)
                     .keyboardType(.numberPad)
                 TextField("Image URL", text: $imageURL)
@@ -35,7 +42,7 @@ struct AddBottleView: View {
             Button("Ajouter la bouteille") {
                 let newBottle = Bottle(
                     nom: nom,
-                    type: type,
+                    type: selectedType.rawValue,  // Stocke la valeur brute de l'énumération
                     annee: Int(annee) ?? 0,
                     imageURL: imageURL.isEmpty ? nil : imageURL,
                     quantite: Int(quantite) ?? 1,

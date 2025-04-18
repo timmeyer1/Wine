@@ -77,6 +77,8 @@ struct CellarView: View {
                 }
                 .navigationTitle("Mon Cellier")
                 
+                
+                
                 // Bouton + flottant en bas à droite
                 VStack {
                     Spacer()

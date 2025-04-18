@@ -10,7 +10,6 @@ import SwiftData
 
 @Model
 class Bottle {
-    // SwiftData génère automatiquement l'ID, pas besoin de @Attribute(.primaryKey)
     var id: UUID
     var nom: String
     var type: String
@@ -20,6 +19,11 @@ class Bottle {
     var lieuAchat: String?
     var dateAjout: Date
 
+    // Nouvelle propriété : note de dégustation
+    var note: Double?  // Note de 0.0 à 5.0
+    var commentaire: String?
+    var dateDegustation: Date?
+
     init(id: UUID = UUID(),
          nom: String,
          type: String,
@@ -27,7 +31,10 @@ class Bottle {
          imageURL: String? = nil,
          quantite: Int,
          lieuAchat: String? = nil,
-         dateAjout: Date = .now) {
+         dateAjout: Date = .now,
+         note: Double? = nil,
+         commentaire: String? = nil,
+         dateDegustation: Date? = nil) {
         self.id = id
         self.nom = nom
         self.type = type
@@ -36,5 +43,8 @@ class Bottle {
         self.quantite = quantite
         self.lieuAchat = lieuAchat
         self.dateAjout = dateAjout
+        self.note = note
+        self.commentaire = commentaire
+        self.dateDegustation = dateDegustation
     }
 }

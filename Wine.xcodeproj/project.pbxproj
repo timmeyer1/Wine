@@ -24,6 +24,7 @@
 		7D4854422DB2740E007DEAE9 /* CellarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4854412DB2740E007DEAE9 /* CellarView.swift */; };
 		7D4854442DB27420007DEAE9 /* BottleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4854432DB27420007DEAE9 /* BottleDetailView.swift */; };
 		7D4854462DB2756D007DEAE9 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4854452DB2756D007DEAE9 /* FriendsView.swift */; };
+		7D48544A2DB27F79007DEAE9 /* BottleRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4854492DB27F79007DEAE9 /* BottleRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		7D4854412DB2740E007DEAE9 /* CellarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarView.swift; sourceTree = "<group>"; };
 		7D4854432DB27420007DEAE9 /* BottleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottleDetailView.swift; sourceTree = "<group>"; };
 		7D4854452DB2756D007DEAE9 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		7D4854492DB27F79007DEAE9 /* BottleRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottleRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				7D4854412DB2740E007DEAE9 /* CellarView.swift */,
 				7D4854432DB27420007DEAE9 /* BottleDetailView.swift */,
 				7D4854452DB2756D007DEAE9 /* FriendsView.swift */,
+				7D4854492DB27F79007DEAE9 /* BottleRatingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4854442DB27420007DEAE9 /* BottleDetailView.swift in Sources */,
+				7D48544A2DB27F79007DEAE9 /* BottleRatingView.swift in Sources */,
 				7D4854382DB24D8C007DEAE9 /* WineType.swift in Sources */,
 				7D48543E2DB2710C007DEAE9 /* Bottle.swift in Sources */,
 				7D4854312DB24A5C007DEAE9 /* WineAPIService.swift in Sources */,
