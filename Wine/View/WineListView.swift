@@ -32,23 +32,25 @@ struct WineListView: View {
 
                 // Liste des vins filtrés
                 List(filteredWines) { wine in
-                    HStack {
-                        AsyncImage(url: URL(string: wine.image ?? "")) { image in
-                            image.resizable()
-                        } placeholder: {
-                            Color.gray.opacity(0.3)
-                        }
-                        .frame(width: 50, height: 50)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                    NavigationLink(destination: WineDetailView(wine: wine)) {
+                        HStack {
+                            AsyncImage(url: URL(string: wine.image ?? "")) { image in
+                                image.resizable()
+                            } placeholder: {
+                                Color.gray.opacity(0.3)
+                            }
+                            .frame(width: 50, height: 50)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
 
-                        VStack(alignment: .leading) {
-                            Text(wine.wine)
-                                .font(.headline)
-                            Text(wine.winery ?? "")
-                                .font(.subheadline)
-                            if let rating = wine.rating?.average {
-                                Text("⭐️ \(String(format: "%.1f", rating))")
-                                    .font(.caption)
+                            VStack(alignment: .leading) {
+                                Text(wine.wine)
+                                    .font(.headline)
+                                Text(wine.winery ?? "")
+                                    .font(.subheadline)
+                                if let rating = wine.rating?.average {
+                                    Text("⭐️ \(String(format: "%.1f", rating))")
+                                        .font(.caption)
+                                }
                             }
                         }
                     }
@@ -81,16 +83,9 @@ struct WineListView: View {
         }
     }
 
-    // Fonction pour récupérer les vins de l'API
     private func fetchWines(for type: WineType) {
         apiService.fetchWines(of: type) { result in
             wines = result
         }
-    }
-}
-
-struct WineListView_Previews: PreviewProvider {
-    static var previews: some View {
-        WineListView()
     }
 }

@@ -13,6 +13,7 @@ struct Wine: Identifiable, Decodable {
     let winery: String?
     let rating: Rating?
     let image: String?
+    let description: String?
 
     struct Rating: Decodable {
         let average: Double?
@@ -38,6 +39,6 @@ struct Wine: Identifiable, Decodable {
     }
 
     enum CodingKeys: String, CodingKey {
-        case wine, winery, rating, image
+        case wine, winery, rating, image, description
     }
 }

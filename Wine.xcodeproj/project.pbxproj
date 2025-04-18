@@ -18,6 +18,7 @@
 		7D4854332DB24A7B007DEAE9 /* WineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4854322DB24A7B007DEAE9 /* WineListView.swift */; };
 		7D4854352DB24A8C007DEAE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4854342DB24A8C007DEAE9 /* ContentView.swift */; };
 		7D4854382DB24D8C007DEAE9 /* WineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4854372DB24D8C007DEAE9 /* WineType.swift */; };
+		7D48543C2DB25452007DEAE9 /* WineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D48543B2DB25452007DEAE9 /* WineDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		7D4854322DB24A7B007DEAE9 /* WineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineListView.swift; sourceTree = "<group>"; };
 		7D4854342DB24A8C007DEAE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D4854372DB24D8C007DEAE9 /* WineType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineType.swift; sourceTree = "<group>"; };
+		7D48543B2DB25452007DEAE9 /* WineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				7D4854322DB24A7B007DEAE9 /* WineListView.swift */,
 				7D4854342DB24A8C007DEAE9 /* ContentView.swift */,
+				7D48543B2DB25452007DEAE9 /* WineDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				7D4854382DB24D8C007DEAE9 /* WineType.swift in Sources */,
 				7D4854312DB24A5C007DEAE9 /* WineAPIService.swift in Sources */,
 				7D4854352DB24A8C007DEAE9 /* ContentView.swift in Sources */,
+				7D48543C2DB25452007DEAE9 /* WineDetailView.swift in Sources */,
 				7D4853BB2DB2309B007DEAE9 /* WineApp.swift in Sources */,
 				7D48542F2DB24A45007DEAE9 /* Wine.swift in Sources */,
 				7D4854332DB24A7B007DEAE9 /* WineListView.swift in Sources */,
