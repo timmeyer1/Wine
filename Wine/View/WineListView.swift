@@ -93,28 +93,6 @@ struct WineListView: View {
                     }
                 }
                 .navigationTitle("Vins")
-                
-                // Bouton + flottant en bas à droite (si vous souhaitez l'ajouter)
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            // Action lorsque le bouton + est pressé
-                            // Par exemple, ajouter un nouveau vin à la liste de favoris
-                        }) {
-                            Image(systemName: "plus")
-                                .font(.title)
-                                .foregroundColor(.white)
-                                .frame(width: 56, height: 56)
-                                .background(Color.blue)
-                                .clipShape(Circle())
-                                .shadow(radius: 4)
-                        }
-                        .padding(.trailing, 20)
-                        .padding(.bottom, 20)
-                    }
-                }
             }
         }
         .onAppear {
