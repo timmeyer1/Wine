@@ -39,7 +39,7 @@ struct WineDetailView: View {
                         .padding(.top, 4)
                 }
                 
-                // Description — toujours affichée
+                // Description
                 VStack(alignment: .leading, spacing: 12) {
                     Text("À propos de ce vin :")
                         .font(.headline)

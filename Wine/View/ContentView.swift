@@ -9,9 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        WineListView()
+        TabView {
+            WineListView()
+                .tabItem {
+                    Label("Vins", systemImage: "wineglass")
+                }
+
+            CellarView()
+                .tabItem {
+                    Label("Cellier", systemImage: "shippingbox.fill")
+                }
+
+            FriendsView()
+                .tabItem {
+                    Label("Amis", systemImage: "person.2.fill")
+                }
+        }
     }
 }
+
 
 #Preview {
     ContentView()

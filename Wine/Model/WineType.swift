@@ -6,12 +6,12 @@
 //
 
 enum WineType: String, CaseIterable {
-    case reds, white, rose, sparkling
+    case reds, whites, rose, sparkling
 
     var label: String {
         switch self {
         case .reds: return "Rouge"
-        case .white: return "Blanc"
+        case .whites: return "Blanc"
         case .rose: return "Rosé"
         case .sparkling: return "Pétillant"
         }
