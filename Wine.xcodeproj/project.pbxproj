@@ -17,6 +17,7 @@
 		7D4854312DB24A5C007DEAE9 /* WineAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4854302DB24A5C007DEAE9 /* WineAPIService.swift */; };
 		7D4854332DB24A7B007DEAE9 /* WineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4854322DB24A7B007DEAE9 /* WineListView.swift */; };
 		7D4854352DB24A8C007DEAE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4854342DB24A8C007DEAE9 /* ContentView.swift */; };
+		7D4854382DB24D8C007DEAE9 /* WineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4854372DB24D8C007DEAE9 /* WineType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		7D4854302DB24A5C007DEAE9 /* WineAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineAPIService.swift; sourceTree = "<group>"; };
 		7D4854322DB24A7B007DEAE9 /* WineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineListView.swift; sourceTree = "<group>"; };
 		7D4854342DB24A8C007DEAE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7D4854372DB24D8C007DEAE9 /* WineType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				7D48542E2DB24A45007DEAE9 /* Wine.swift */,
+				7D4854372DB24D8C007DEAE9 /* WineType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4854382DB24D8C007DEAE9 /* WineType.swift in Sources */,
 				7D4854312DB24A5C007DEAE9 /* WineAPIService.swift in Sources */,
 				7D4854352DB24A8C007DEAE9 /* ContentView.swift in Sources */,
 				7D4853BB2DB2309B007DEAE9 /* WineApp.swift in Sources */,

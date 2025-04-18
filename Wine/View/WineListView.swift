@@ -8,22 +8,30 @@
 import SwiftUI
 
 struct WineListView: View {
-    @State private var selectedType: WineAPIService.WineType = .reds
+    @State private var selectedType: WineType = .reds
     @State private var wines: [Wine] = []
+    @State private var searchText: String = ""
     private let apiService = WineAPIService()
 
     var body: some View {
         NavigationView {
             VStack {
+                // Picker pour sélectionner le type de vin
                 Picker("Type de vin", selection: $selectedType) {
-                    ForEach(WineAPIService.WineType.allCases, id: \.self) {
-                        Text($0.rawValue.capitalized)
+                    ForEach(WineType.allCases, id: \.self) { type in
+                        Text(type.label).tag(type)
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
 
-                List(wines) { wine in
+                // Barre de recherche
+                TextField("Rechercher un vin...", text: $searchText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+
+                // Liste des vins filtrés
+                List(filteredWines) { wine in
                     HStack {
                         AsyncImage(url: URL(string: wine.image ?? "")) { image in
                             image.resizable()
@@ -49,16 +57,40 @@ struct WineListView: View {
             .navigationTitle("Vins")
         }
         .onAppear {
-            fetchWines()
+            fetchWines(for: selectedType)
         }
         .onChange(of: selectedType) {
-            fetchWines()
+            fetchWines(for: selectedType)
+        }
+        .onChange(of: searchText) {
+            if searchText.isEmpty {
+                fetchWines(for: selectedType)
+            } else {
+                apiService.fetchAllWines { all in
+                    wines = all.filter { $0.wine.lowercased().contains(searchText.lowercased()) }
+                }
+            }
         }
     }
 
-    private func fetchWines() {
-        apiService.fetchWines(of: selectedType) { result in
+    private var filteredWines: [Wine] {
+        if searchText.isEmpty {
+            return wines
+        } else {
+            return wines.filter { $0.wine.lowercased().contains(searchText.lowercased()) }
+        }
+    }
+
+    // Fonction pour récupérer les vins de l'API
+    private func fetchWines(for type: WineType) {
+        apiService.fetchWines(of: type) { result in
             wines = result
         }
+    }
+}
+
+struct WineListView_Previews: PreviewProvider {
+    static var previews: some View {
+        WineListView()
     }
 }
